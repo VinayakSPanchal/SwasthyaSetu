@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { creditBenefits, features, testimonials } from "@/lib/data";
+import { PricingTable } from "@clerk/nextjs";
+import Pricing from "@/components/pricing";
 
 export default function Home() {
   return (
@@ -18,11 +20,11 @@ export default function Home() {
                 variant="outline"
                 className="bg-emerald-900/30 border-emerald-700/30 px-4 py-2 text-emerald-400 text-sm font-medium"
               >
-                Healthcare made simple
+                Healthcare Made Simple
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Connect with doctors <br />
-                <span className="gradient-title">anytime, anywhere</span>
+                <span className="gradient-title">Anytime & Anywhere</span>
               </h1>
               <p className="text-muted-foreground text-lg md:text-xl max-w-md">
                 Book appointments, consult via video, and manage your healthcare
@@ -70,7 +72,7 @@ export default function Home() {
               How It Works
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Our platform makes healthcare accessible with just a few clicks
+              SwasthyaSetu portal makes healthcare accessible with just a few clicks
             </p>
           </div>
 
@@ -117,8 +119,10 @@ export default function Home() {
           </div>
 
           {/* Static Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-card border-emerald-900/20">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
+          <div>
+          <Pricing/>
+            {/* <Card className="bg-card border-emerald-900/20">
               <CardHeader>
                 <CardTitle className="text-white">Basic</CardTitle>
               </CardHeader>
@@ -128,9 +132,9 @@ export default function Home() {
                   One-time doctor consultation with follow-up advice.
                 </p>
               </CardContent>
-            </Card>
+            </Card> */}
 
-            <Card className="bg-card border-emerald-900/20">
+            {/* <Card className="bg-card border-emerald-900/20">
               <CardHeader>
                 <CardTitle className="text-white">Standard</CardTitle>
               </CardHeader>
@@ -140,9 +144,9 @@ export default function Home() {
                   Up to 3 consultations per month with priority scheduling.
                 </p>
               </CardContent>
-            </Card>
+            </Card> */}
 
-            <Card className="bg-card border-emerald-900/20">
+            {/* <Card className="bg-card border-emerald-900/20">
               <CardHeader>
                 <CardTitle className="text-white">Premium</CardTitle>
               </CardHeader>
@@ -152,8 +156,10 @@ export default function Home() {
                   Unlimited consultations, video calls, and 24/7 chat support.
                 </p>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
+
+              
 
           {/* Description */}
           <Card className="mt-12 bg-muted/20 border-emerald-900/30">
